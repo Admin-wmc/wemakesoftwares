@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+    <!-- Main start -->
+    <main class="main">
+
+        <!-- Breadcrumb Section Start -->
+        <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.jpg');">
+            <div class="arrow-shape float-bob-y">
+                <img src="assets/img/arrow.png" alt="img">
+            </div>
+            <div class="dot-shape float-bob-y">
+                <img src="assets/img/dot.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <div class="breadcrumb-sub-title">
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">Contact <span>Us</span></h1>
+                    </div>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <a href="index.html">
+                            Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </li>
+                        <li>
+                            Contact Us
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Info Section Start -->
+        <section class="contact-info-areas fix section-padding">
+            <div class="container">
+                <div class="contact-info-wrapper-22">
+                    <div class="row g-4">
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="contact-info-items-2">
+                                <div class="icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>Phone & Fax</h3>
+                                    <ul>
+                                        <li>Mobile : <a href="tel:+1979056780">+197 -90 - 56 - 780</a></li>
+                                        <li>Fax : <a href="tel:+442081234567">+44-208-1234567</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="contact-info-items-2 style-2">
+                                <div class="icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>Mail Address</h3>
+                                    <ul>
+                                        <li><a href="#0">Info.company@gmail.com</a></li>
+                                        <li><a href="#0">Info.company@yahoo.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                            <div class="contact-info-items-2">
+                                <div class="icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>Our Location</h3>
+                                    <ul>
+                                        <li>Mobile : 85 Ketch Harbour</li>
+                                        <li>RoadBensalem, PA 19020</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section Start -->
+        <section class="contact-section fix section-padding pt-0">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="contact-form-items style-2 style-3">
+                            <div class="section-title">
+                                <span class="wow fadeInUp">contact us<i class="fa-solid fa-arrow-right"></i></span>
+                                <h2 class="wow fadeInUp" data-wow-delay=".3s">Get in touch!</h2>
+                            </div>
+                            <form action="contact.php" id="contact-form" method="POST" class="mt-4 mt-md-0">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <div class="form-clt">
+                                            <input type="text" name="name" id="name" placeholder="Full Name*">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-clt">
+                                            <input type="text" name="email" id="email2" placeholder="Email Address*">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-clt">
+                                            <div class="nice-select" tabindex="0">
+                                                <span class="current">
+                                                    Type of Services
+                                                </span>
+                                                <ul class="list">
+                                                    <li data-value="1" class="option selected focus">
+                                                        Service
+                                                    </li>
+                                                    <li data-value="1" class="option">
+                                                        Pricing
+                                                    </li>
+                                                    <li data-value="1" class="option">
+                                                        Support
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-clt">
+                                            <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <button type="submit" class="theme-btn">
+                                            Send Message <i class="fa-solid fa-arrow-right-long"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="map-items">
+                            <div class="googpemap">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Marquee Section Start -->
+         <div class="marquee-sections fix section-padding pt-0">
+            <div class="mycustom-marque">
+                <div class="scrolling-wrap gap-100">
+                    <div class="comm">
+                        <div class="cmn-textslide textitalick text-custom-storke">Contact</div>
+                        <div class="cmn-textslide textitalick text-custom-storke">us</div>
+                        <div class="cmn-textslide textitalick text-custom-storke">now</div>
+                    </div>
+                    <div class="comm">
+                        <div class="cmn-textslide textitalick text-custom-storke">Contact</div>
+                        <div class="cmn-textslide textitalick text-custom-storke">us</div>
+                        <div class="cmn-textslide textitalick text-custom-storke">now</div>
+                    </div>
+                    <div class="comm">
+                        <div class="cmn-textslide textitalick text-custom-storke">Contact</div>
+                        <div class="cmn-textslide textitalick text-custom-storke">us</div>
+                        <div class="cmn-textslide textitalick text-custom-storke">now</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- Main End -->
+{% endblock body %}

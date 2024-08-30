@@ -4429,7 +4429,7 @@ footer {
 }
 
 .footer-version-one {
-  background: url(../../assets/img/footer/footer-version1bg.png) no-repeat center center;
+  background: url('../img/footer/footer-version1bg.png') no-repeat center center;
   background-size: cover;
 }
 
@@ -6888,7 +6888,7 @@ input.main-search-input::placeholder {
 }
 
 .team-staft {
-  background: url(../../assets/img/team/team-stafbg.png) no-repeat center center;
+  background: url(../img/team/team-stafbg.png) no-repeat center center;
   background-size: cover;
 }
 
