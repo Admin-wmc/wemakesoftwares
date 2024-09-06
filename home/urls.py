@@ -1,6 +1,10 @@
 
 from django.urls import path,include
 from . import views
+# urls.py
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path, include
 urlpatterns = [
     path('', views.home,name="home"),
     path('about', views.about,name="about"),
@@ -17,5 +21,10 @@ urlpatterns = [
     path('blog_list', views.blog_list,name="blog_list"),
     path('blog_details', views.blog_details,name="blog_details"),
     path('error_404', views.error_404,name="error_404"),
+    path('register_api/', views.RegisterView.as_view(), name='register'),
+    path('login_api/', views.LoginView.as_view(), name='login'),
+    path('register/', views.Register_form, name = "register"),
+    path('login/',views.login_form,name='login'),
+ 
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

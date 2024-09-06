@@ -1,0 +1,401 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iofrm</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/iofrm-style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/iofrm-theme9.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/custom-style.css">
+</head>
+<body>
+    <div class="form-body">
+        <div class="iofrm-layout">
+            <div class="img-holder">
+                <div class="bg"></div>
+                <div class="info-holder">
+                    <h3>Get more things done with Loggin platform.</h3>
+                    <p>Access to the most powerful tool in the entire design and web industry.</p>
+                    <img src="/static/images/graphic5.svg" alt="">
+                </div>
+            </div>
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <div class="website-logo-inside">
+                            <a href="index.html">
+                                <div class="logo">
+                                    <img class="logo-size" src="/static/images/logo-light.svg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="page-links">
+                            <a href="{% url 'login' %}">Login</a><a href="{% url 'register' %}" class="active">Register</a>
+                        </div>
+                            
+                        <div class="col-lg-7" style="width:500px;">
+                            <div id="wizard_container">
+                                <div id="top-wizard">
+                                    <div id="progressbar"></div>
+                                </div>
+                                <!-- /top-wizard -->
+                                <form name="example-1" id="registration-form" method="POST">
+                                    <input id="website" name="website" style="display: none;" value="">
+                                    <!-- Leave for security protection, read docs for details -->
+                                    <div id="middle-wizard">
+                                        <div class="step">
+                                            <h3 class="main_question"><strong>1/4</strong> Personal Details</h3>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" name="firstname" id ="firstname" class="form-control required" placeholder="First Name(as per Aadhar and PAN)">
+                                                        <span class="error-message" id="firstname-error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" name="lastname" id="lastname" class="form-control required" placeholder="Last Name(as per Aadhar and PAN)">
+                                                        <span class="error-message" id="lastname-error"></span>
+                                                    </div>
+                                                </div>
+                                               
+                                            </div>
+                                            <!-- /row -->
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="date"  id="dateofbirth" name="dateofbirth" class="form-control required" placeholder="Date of Birth(DOB)">
+                                                        <span class="error-message" id="dateofbirth-error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="radio-wrapper-1">
+                                                        <input id="male" type="radio" name="Gender" checked>
+                                                        <label for="male">Male</label>
+                                                      
+                                                        <input id="female" type="radio" name="Gender">
+                                                        <label for="female">Female</label>
+                                                        <span class="error-message" id="gender-error"></span>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <!-- /row -->
+                                                <div class= "row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text"id = "bloodgroup" name="bloodgroup" class="form-control required" placeholder="Blood Group">
+                                                        <span class="error-message" id="bloodgroup-error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                <div class="form-group">
+                                                        <div class="styled-select">
+                                                            <select class="required" id = "maritalstatus" name="maritalstatus">
+                                                                <option value="" selected>Marital Status</option>
+                                                                <option value="North America">Married</option>
+                                                                <option value="South America">Un Married</option>
+                                                            </select>
+                                                            <span class="error-message" id="maritalstatus-error"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /row -->
+
+                                            <!-- New fields -->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="date" id="marriagedate" name="marriagedate" class="form-control required" placeholder="Marriage Date" required>
+                                                        <span class="error-message" id="marriagedate-error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" id="currentaddress" name="currentaddress" class="form-control required" placeholder="Current Address">
+                                                        <span class="error-message" id="currentaddress-error"></span>
+                                                    </div>
+                                                </div>
+                                               
+                                            </div>
+
+                                            <!-- /row -->
+                                              <!-- New fields -->
+                                            <div class="row">
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="number" id="phonenumber" name="PhoneNumber" class="form-control required" placeholder="Phone Number">
+                                                        <span class="error-message" id="phonenumber-error"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="email" id="email" name="email" class="form-control required" placeholder="Email ID" required>
+                                                        <span class="error-message" id="email-error"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- /row -->
+                                                
+                                                <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="file" id="uploadimage" name="Uploadedimage" class="form-control required" placeholder="Upload Image">
+                                                        <span class="error-message" id="uploadimage-error"></span>
+                                                    </div>
+                                                </div>
+                                               
+                                            </div>
+                                 
+                                            <!-- /row -->
+                                        </div>
+                                        <!-- /step-->
+
+                                        <div class="step">
+                                            <h3 class="main_question"><strong>2/4</strong> Account Security</h3>
+                                             <!-- /row -->
+                                              <!-- New fields -->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="password" id="password" name="password" class="form-control required" placeholder="Password">
+                                                        <span class="error-message" id="password-error"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="password" id="confirmpassword" name="confirmpassword" class="form-control required" placeholder="Confirm Password">
+                                                        <span class="error-message" id="confirmpassword-error"></span>
+                                                    </div>
+                                                </div>
+                            
+                                            </div>
+                            
+                                            <!-- /row -->
+                                        </div>
+                                        <!-- /step-->
+                                        <div class="step">
+                                            <h3 class="main_question"><strong>3/4</strong> Educational and Employment Details</h3>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input type="text" id="highestqualification" name="highestqualification" class="form-control required" placeholder="Highest Qualificationwith a valid certificate)">
+                                                            <span class="error-message" id="qualification-error"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                    <div class="form-group">
+                                                            <div class="styled-select">
+                                                                <select class="required" id="roletype" name="RoleType">
+                                                                    <option value="" selected>Role Type</option>
+                                                                    <option value="Full-time">Full-time</option>
+                                                                    <option value="Part-time">Part-time</option>
+                                                                    <option value="Freelancer">Freelancer</option>
+                                                                    <option value="Internship">Internship</option>
+                                                                </select>
+                                                                <span class="error-message" id="roletype-error"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        
+                                                </div>
+                                            <!-- /row -->
+
+                                            
+                                    
+                                        </div>  
+                                        <!-- /step-->
+
+                                        <div class="submit step">
+                                            <h3 class="main_question"><strong>4/4</strong> Financial and System Details</h3>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" id="pannumber" name="Pan" class="form-control required" placeholder="PAN Number">
+                                                        <span class="error-message" id="pannumber-error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="file" id="uploadpan" name="uploadpan" class="form-control required" placeholder="Upload PAN Card(scan and upload)">
+                                                        <span class="error-message" id="uploadpan-error"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <!-- /row -->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" id="bankname" name="BankName" class="form-control required" placeholder="Bank Name">
+                                                        <span class="error-message" id="bankname-error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="number" id="bankaccountnumber" name="BankAccountNumber" class="form-control required" placeholder="Bank Account Number">
+                                                        <span class="error-message" id="bankaccountnumber-error"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /row -->
+
+                                            <div class="row">
+                                            
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" id="ifsccode" name="BankIFSCCode" class="form-control required" placeholder="Bank IFSC Code">
+                                                        <span class="error-message" id="ifsccode-error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" id="employeename" name="EmployeeName" class="form-control required" placeholder="Employee Name(Bank Account Holder's Name)">
+                                                        <span class="error-message" id="employeename-error"></span>
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                            <!-- /row -->
+
+                                            <!-- New fields -->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="date" name="Aadharnumber" id="aadharnumber" class="form-control required" placeholder="Aadhar Number" required>
+                                                        <span class="error-message" id="aadharnumber-error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="file" id="uploadaadharcard" name="UploadAadharCard " class="form-control required" placeholder="Upload Aadhar Card Scan(front and back in a single file)">
+                                                        <span class="error-message" id="uploadaadharcard-error"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" id ="systemipaddress" name="SystemIPAddress" class="form-control required" placeholder="System IP Address">
+                                                        <span class="error-message" id="systemipaddresss-error"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- /row -->
+                                           
+                                        <!-- /step-->
+                                    </div>
+                                    <!-- /middle-wizard -->
+                                    <div id="bottom-wizard">
+                                        <button type="button" name="backward" class="backward">Backward</button>
+                                        <button type="button" name="forward" class="forward">Forward</button>
+                                        <button type="submit" name="process" class="submit" id="registration-form">Submit</button>
+                                    </div>
+                                    <!-- /bottom-wizard -->
+                                </form>
+                            </div>
+                            <!-- /Wizard container -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+<script src="/static/js/main.js"></script>
+<script src="/static/js/common_scripts_min.js"></script>
+<!-- Wizard script --> 
+<script src="/static/js/registration_wizard_func.js"></script> 
+<!-- Menu script -->
+<script src="/static/js/velocity.min.js"></script>
+<script src="/static/js/main.js"></script> 
+<script src="/static/js/custom-js.js"></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Handle form submission
+        $('#registration-form').on('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            // Create a FormData object
+            var formData = new FormData(this); // 'this' refers to the form element
+
+            // Optionally, append additional data
+            formData.append('firstname', $('#firstname').val());
+            formData.append('lastname', $('#lastname').val());
+            formData.append('dateofbirth', $('#dateofbirth').val());
+            formData.append('gender', $('input[name="Gender"]:checked').val());
+            formData.append('bloodgroup', $('#bloodgroup').val());
+            formData.append('maritalstatus', $('#maritalstatus').val());
+            formData.append('marriagedate', $('#marriagedate').val());
+            formData.append('currentaddress', $('#currentaddress').val());
+            formData.append('phonenumber', $('#phonenumber').val());
+            formData.append('mail_id', $('#email').val());
+            formData.append('password', $('#password').val());
+            formData.append('password2', $('#confirmpassword').val());
+            formData.append('highestqualification', $('#highestqualification').val());
+            formData.append('roletype', $('#roletype').val());
+            formData.append('pannumber', $('#pannumber').val());
+            formData.append('bankname', $('#bankname').val());
+            formData.append('bankaccountnumber', $('#bankaccountnumber').val());
+            formData.append('ifsccode', $('#ifsccode').val());
+            formData.append('employeename', $('#employeename').val());
+            formData.append('aadharnumber', $('#aadharnumber').val());
+            formData.append('systemipaddress', $('#systemipaddress').val());
+
+            // Append file inputs
+            var fileInputs = [
+                'uploadimage',
+                'uploadpan',
+                'uploadaadharcard'
+            ];
+            
+            fileInputs.forEach(function(id) {
+                var fileInput = document.getElementById(id);
+                if (fileInput.files.length > 0) {
+                    formData.append(id, fileInput.files[0]);
+                }
+            });
+
+            // Send data via AJAX
+            $.ajax({
+                url: 'http://localhost:8000/register_api/', // API endpoint
+                type: 'POST',
+                data: formData, // Use FormData object
+                processData: false, // Prevent jQuery from automatically processing the data
+                contentType: false, // Prevent jQuery from setting the content type
+                success: function(response) {
+                    // Handle success response
+                    alert('Registration successful!');
+                    console.log(response);
+                },
+                error: function(xhr, status, error) {
+                    // Handle error response
+                    var errors = xhr.responseJSON;
+                    for (var key in errors) {
+                        $('#' + key + '-error').text(errors[key][0]); // Display errors in the respective fields
+                    }
+                    console.error(error);
+                }
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>
